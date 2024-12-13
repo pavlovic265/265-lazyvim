@@ -1,9 +1,21 @@
 return {}
 -- return {
---   { "nvim-neotest/neotest-jest" },
---   {
---     "nvim-neotest/neotest",
---     opts = { adapters = { "neotest-plenary" } },
---     -- opts = { adapters = { "neotest-jest" } },
+--   "nvim-neotest/neotest",
+--   dependencies = {
+--     "nvim-neotest/neotest-jest",
 --   },
+--   config = function()
+--     require("neotest").setup({
+--       adapters = {
+--         require("neotest-jest")({
+--           jestCommand = "npm test --",
+--           jestConfigFile = "jest.config.ts",
+--           env = { CI = true },
+--           cwd = function(path)
+--             return vim.fn.getcwd()
+--           end,
+--         }),
+--       },
+--     })
+--   end,
 -- }
